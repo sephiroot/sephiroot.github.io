@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Guide</h2>
+
+<button class="accordion">Home</button>
+<div class="panel">
+    <p>The home page shows some data related to the team.</p>
+    <p>Pull to refresh the page some time after the race!</p>
+</div>
+
+<button class="accordion">Teams</button>
+<div class="panel">
+    <p>Here you can see all the teams sorted by points.</p>
+    <p>Pull to refresh the page some time after the race!</p>
+    <p>Tap on any card to see how the team performed so far!</p>
+    <p>Your team will be highlighted using the color you chose during player creation or in the settings page.</p>
+    <p>There are two floating button at the bottom of the page:</p>
+    <img src="assets/fabInfo.png"/>
+    <p>Open a dialog describing all the icons you can see in the results for each team</p>
+    <img src="assets/podiumFab.png"/>
+    <p>Open a dialog showing a summary of the points granted to each team in the last race. Teams are sorted by points
+        earned along with the icons for each event that contributed to the final result.</p>
+</div>
+
+<button class="accordion">Drivers</button>
+<div class="panel">
+    <p>Here you can see all the drivers sorted by points.</p>
+    <p>Pull to refresh the page some time after the race!</p>
+    <p>Tap on any driver's card to see the results for each race</p>
+    <p>Drivers in your team will be highlighted using the color you chose during player creation or in the settings
+        page.</p>
+    <img src="assets/recycle.png"/>
+    <p>This icon next to the driver's points, means that the driver has been replaced on that
+        race. Points earned by the replacement will anyway contribute to the teams owning the replaced driver.</p>
+</div>
+
+<button class="accordion">Bet</button>
+<div class="panel">
+    <p>Bets for a race will open as soon as the previous grand prix ends.</p>
+    <img src="assets/bet1.png"/>
+    <p>Betting page looks like this:</p>
+    <img src="assets/betPage.png"/>
+    <p>
+        1) Countdown: bet for the race must be submitted before the countdown expires. If you won't bet on time
+        there will be a <b>-5 points</b> penalty for the race and last race's bet will be inherited for the upcoming
+        one. It is possible to submit your bet <b>up to 1 hour before qualifying.</b>
+    </p>
+    <p>
+        2) Date and name of the upcoming race
+    </p>
+    <p>
+        3) Status of the bet: it could be
+    <p><span style="background-color: red; color: black"> invalid</span>: there is something wrong with your bet;
+        you must fix all the errors to enable saving.</p>
+    <p><span style="background-color: yellow; color: black"> unsaved </span>: meaning that something changed from your
+        last save, and you must save again if you do not want to lose your changes.
+    </p>
+    <p>No status indicator means that bet is correct and saved.</p>
+    <p>
+        4) Captain status indicator: you must select your captain before each race. If the captain manages to complete
+        the race
+        against his teammate it will grant <b>+2 points</b> to the team. Captain is mandatory, a red indicator means you
+        still must pick one.
+
+    </p>
+    <p>
+        5) Captain selector: click on the name to select you captain. You can switch by clicking on the other driver's
+        name.
+    </p>
+    <p>
+        6) Bet status indicator: if red it means there are errors in yout bets.
+    <p> Betting rules:</p>
+    <p> - Grid/Race/Sprint (if available) are mandatory</p>
+    <p> - Grid/Race/Sprint must be numbers (up to 2 digits) from 1 to 20 included</p>
+    <p> - You cannot bet the result for both drivers (e.g. it is not possible to insert 17 on grid
+        for both drivers)</p>
+    <p>
+        The status indicator will stay red as long as there is something wrong with the bets.
+    </p>
+    <p>
+        7-8) Betting lines: here you put your numbers for each driver, the icon on the red will turn into red if the bet
+        is not correct.
+    </p>
+    <p>
+        9) Helper text: when visible it will inform you about duplicated bets on your screen.
+    </p>
+    <p>
+        10) Save button: use this button to save your bet. The icon will inform you about the status of your bet:
+    <p></p>
+    <img src="assets/save.png"/>
+    <p>Bet is valid and can be saved.</p>
+    <img src="assets/invalidBet.png"/>
+    <p>Bet is invalid and cannot be saved.</p>
+    <img src="assets/outOfTime.png"/>
+    <p style="justify-content: center">
+        Time expired and the bet cannot be modified nor saved.
+    </p>
+</div>
+
+<button class="accordion">Races</button>
+<div class="panel">
+    <p></p>
+</div>
+
+<button class="accordion">Settings</button>
+<div class="panel">
+    <p></p>
+</div>
+
+<button class="accordion">Summer Market</button>
+<div class="panel">
+    <p></p>
+</div>
+
+<button class="accordion">Points assignment</button>
+<div class="panel">
+    <p></p>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
