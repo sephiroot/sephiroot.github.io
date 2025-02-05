@@ -3,28 +3,36 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
         .accordion {
-            background-color: #eee;
-            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .accordion-header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
             cursor: pointer;
-            padding: 18px;
-            width: 100%;
             border: none;
             text-align: left;
             outline: none;
-            font-size: 15px;
-            transition: 0.4s;
+            width: 100%;
         }
 
-        .active, .accordion:hover {
-            background-color: #ccc;
-        }
-
-        .panel {
-            padding: 0 18px;
+        .accordion-content {
             display: none;
-            background-color: white;
-            overflow: hidden;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+
+        .accordion-content.active {
+            display: block;
         }
     </style>
 </head>
@@ -32,136 +40,280 @@
 
 <h2>Guide</h2>
 
-<button class="accordion">Home</button>
-<div class="panel">
-    <p>The home page shows some data related to the team.</p>
-    <p>Pull to refresh the page some time after the race!</p>
+<p>Click on the links below to open a specific accordion:</p>
+<ul>
+    <li><a href="#home">Open Accordion 1</a></li>
+    <li><a href="#teams">Open Accordion 2</a></li>
+    <li><a href="#drivers">Open Accordion 3</a></li>
+</ul>
+
+
+<div class="accordion" id="home">
+    <button class="accordion-header">Home</button>
+    <div class="accordion-content">
+        <img src="assets/dash1.png" height="50%" width="50%"/>
+        <ol>
+            <li>Team logo</li>
+            <li>Team's performance</li>
+            <li>Next race and corresponding countdown</li>
+        </ol>
+    </div>
 </div>
 
-<button class="accordion">Teams</button>
-<div class="panel">
-    <p>Here you can see all the teams sorted by points.</p>
-    <p>Pull to refresh the page some time after the race!</p>
-    <p>Tap on any card to see how the team performed so far!</p>
-    <p>Your team will be highlighted using the color you chose during player creation or in the settings page.</p>
-    <p>There are two floating button at the bottom of the page:</p>
-    <img src="assets/fabInfo.png"/>
-    <p>Open a dialog describing all the icons you can see in the results for each team</p>
-    <img src="assets/podiumFab.png"/>
-    <p>Open a dialog showing a summary of the points granted to each team in the last race. Teams are sorted by points
-        earned along with the icons for each event that contributed to the final result.</p>
+<div class="accordion" id="teams">
+    <button class="accordion-header">Teams</button>
+    <div class="accordion-content">
+        <p>Teams' standing sorted by points.<br/>
+            Pull to refresh the page some time after the race!</p>
+        <img src="assets/teams1.png" height="50%" width="50%"/>
+        <ol>
+            <li>List of teams in league. Your team will be highlighted using the color you chose during player creation
+                or in the settings page.
+            </li>
+            <li>Open a dialog describing all the icons you can see in the results for each team. Not visible until the
+                first race has ended.
+            </li>
+            <li>Open a dialog showing a summary of the points earned by each team in the last race.<br/>
+                Next to the points are shown the icons for each event that contributed to the final result.
+            </li>
+        </ol>
+        <img src="assets/teams2.png" height="50%" width="50%"/>
+        <p>Tap on any card to see how the team performed in the previous races.</p>
+        <img src="assets/placeholder.png" height="50%" width="50%"/>
+        <p>Here you can see points scored by drivers of the team for each race. Far right column is the position of the
+            team and how it changed compared to last race.</p>
+    </div>
 </div>
 
-<button class="accordion">Drivers</button>
-<div class="panel">
-    <p>Here you can see all the drivers sorted by points.</p>
-    <p>Pull to refresh the page some time after the race!</p>
-    <p>Tap on any driver's card to see the results for each race</p>
-    <p>Drivers in your team will be highlighted using the color you chose during player creation or in the settings
-        page.</p>
-    <img src="assets/recycle.png"/>
-    <p>This icon next to the driver's points, means that the driver has been replaced on that
-        race. Points earned by the replacement will anyway contribute to the teams owning the replaced driver.</p>
+<div class="accordion" id="drivers">
+    <button class="accordion-header">Drivers</button>
+    <div class="accordion-content">
+        <p>Drivers' standing sorted by points.</p>
+        <p>Pull to refresh the page some time after the race!</p>
+        <img src="assets/drivers1.png" height="50%" width="50%"/>
+        <p>Owned drivers will be highlighted using the color you chose during player creation
+            or in the settings page.<br/>
+            Drivers in your team will be highlighted using the color you chose during player creation or in the settings
+            page.</p>
+        <p>If a player gets permanently replaced mid-season, his card will stay with the label "replaced by" and it
+            won't be
+            updated any longer.<br/>
+            On the other hand, a new card will be added for the new driver.</p>
+        <p>Tap on any driver's card to see the results for each race.</p>
+        <p>If a driver gets temporarily replaced by someone else for one or more races, in the driver's details the
+            following icon will appear next to the points earned for those races.</p>
+        <img src="assets/recycle.png"/>
+        <p>Points earned by the replacement will anyway contribute to the teams owning the replaced driver.</p>
+    </div>
 </div>
 
-<button class="accordion">Bet</button>
-<div class="panel">
-    <p>Bets for a race will open as soon as the previous grand prix ends.</p>
-    <img src="assets/bet1.png"/>
-    <p>Betting page looks like this:</p>
-    <img src="assets/betPage.png"/>
-    <p>
-        1) Countdown: bet for the race must be submitted before the countdown expires. If you won't bet on time
-        there will be a <b>-5 points</b> penalty for the race and last race's bet will be inherited for the upcoming
-        one. It is possible to submit your bet <b>up to 1 hour before qualifying.</b>
-    </p>
-    <p>
-        2) Date and name of the upcoming race
-    </p>
-    <p>
-        3) Status of the bet: it could be
-    <p><span style="background-color: red; color: black"> invalid</span>: there is something wrong with your bet;
-        you must fix all the errors to enable saving.</p>
-    <p><span style="background-color: yellow; color: black"> unsaved </span>: meaning that something changed from your
-        last save, and you must save again if you do not want to lose your changes.
-    </p>
-    <p>No status indicator means that bet is correct and saved.</p>
-    <p>
-        4) Captain status indicator: you must select your captain before each race. If the captain manages to complete
-        the race
-        against his teammate it will grant <b>+2 points</b> to the team. Captain is mandatory, a red indicator means you
-        still must pick one.
-
-    </p>
-    <p>
-        5) Captain selector: click on the name to select you captain. You can switch by clicking on the other driver's
-        name.
-    </p>
-    <p>
-        6) Bet status indicator: if red it means there are errors in yout bets.
-    <p> Betting rules:</p>
-    <p> - Grid/Race/Sprint (if available) are mandatory</p>
-    <p> - Grid/Race/Sprint must be numbers (up to 2 digits) from 1 to 20 included</p>
-    <p> - You cannot bet the result for both drivers (e.g. it is not possible to insert 17 on grid
-        for both drivers)</p>
-    <p>
-        The status indicator will stay red as long as there is something wrong with the bets.
-    </p>
-    <p>
-        7-8) Betting lines: here you put your numbers for each driver, the icon on the red will turn into red if the bet
-        is not correct.
-    </p>
-    <p>
-        9) Helper text: when visible it will inform you about duplicated bets on your screen.
-    </p>
-    <p>
-        10) Save button: use this button to save your bet. The icon will inform you about the status of your bet:
-    <p></p>
-    <img src="assets/save.png"/>
-    <p>Bet is valid and can be saved.</p>
-    <img src="assets/invalidBet.png"/>
-    <p>Bet is invalid and cannot be saved.</p>
-    <img src="assets/outOfTime.png"/>
-    <p style="justify-content: center">
-        Time expired and the bet cannot be modified nor saved.
-    </p>
+<div class="accordion" id="bet">
+    <button class="accordion-header">Bet</button>
+    <div class="accordion-content">
+        <p>Bets for a race will open as soon as the previous grand prix ends.</p>
+        <img src="assets/betPage.png"/>
+        <ol>
+            <li>Countdown: bet for the race must be submitted before the countdown expires. If you won't bet on time
+                there will be a <b>-5 points</b> penalty for the race and last race's bet will be inherited for the
+                upcoming
+                one. It is possible to submit your bet <b>up to 1 hour before qualifying.</b></li>
+            <li>Date and name of the upcoming race</li>
+            <li>Status of the bet: it could be</li>
+            <p><span style="background-color: red; color: black"> invalid</span>: there is something wrong with your
+                bet;
+                you must fix all the errors to enable saving.</p>
+            <p><span style="background-color: yellow; color: black"> unsaved </span>: meaning that something changed
+                from
+                your
+                last save, and you must save again if you do not want to lose your changes.
+            </p>
+            <p>No status indicator means that bet is correct and saved.</p>
+            <li>
+                Captain status indicator: you must select your captain before each race. If the captain manages to
+                complete
+                the race
+                against his teammate it will grant <b>+2 points</b> to the team. Captain is mandatory, a red indicator
+                means
+                you
+                still must pick one.
+            </li>
+            <li>
+                Captain selector: click on the name to select you captain. You can switch by clicking on the other
+                driver's
+                name.
+            </li>
+            <li>
+                Bet status indicator: if red it means there are errors in yout bets.
+                <p> Betting rules:</p>
+                <ul>
+                    <li>Grid/Race/Sprint (if available) are mandatory</li>
+                    <li>Grid/Race/Sprint must be numbers (up to 2 digits) from 1 to 20 included</li>
+                    <li>You cannot bet the result for both drivers (e.g. it is not possible to insert 17 on grid
+                        for both drivers)
+                    </li>
+                </ul>
+                <p>
+                    The status indicator will stay red as long as there is something wrong with the bets.
+                </p>
+            </li>
+            <li>
+                Betting lines: here you put your numbers for each driver, the icon on the red will turn into red if
+                the
+                bet
+                is not correct.
+            </li>
+            <li>Helper text: when visible it will inform you about duplicated bets on your screen.
+            </li>
+            <li>
+                Save button: use this button to save your bet. The icon will inform you about the status of your
+                bet:
+                <p></p>
+                <img src="assets/save.png"/>
+                <p>Bet is valid and can be saved.</p>
+                <img src="assets/invalidBet.png"/>
+                <p>Bet is invalid and cannot be saved.</p>
+                <img src="assets/outOfTime.png"/>
+                <p style="justify-content: center">
+                    Time expired and the bet cannot be modified nor saved.
+                </p>
+            </li>
+        </ol>
+    </div>
 </div>
 
-<button class="accordion">Races</button>
-<div class="panel">
-    <p></p>
+<div class="accordion" id="races">
+    <button class="accordion-header">Races</button>
+    <div class="accordion-content">
+        <p>In this page are listed all the races sorted by date.</p>
+        <p>Pull to refresh!</p>
+        <img src="assets/races1.png" height="50%" width="50%"/>
+        <ol>
+            <li>Race card with date and flag of the corresponding race.</li>
+            <li>This icon means that the race has ended.</li>
+        </ol>
+        <p><b>Actions available on cards:</b></p>
+        <ul>
+            <li>Single tap to flip it and see the bets for the race.
+                <p></p>
+                <img src="assets/placeholder.png">
+                <p>Here you can see teams' bets for the race. They won't be available before qualifying.<br/>
+                    Before the end of the race, only bets will show up, but once the race is complete and points updated
+                    (it may
+                    take some time), next to each bet it will be shown the actual result for the driver if the bet
+                    didn't match
+                    or this icon
+                    <img src="assets/bulls.png"/> if the bet was correct.</p>
+                <p>Do not forget to come back here after the race to check how all teams performed!</p>
+            </li>
+            <li>Long tap (2 seconds) on a race's card will take you to the f1 official site for the race</li>
+        </ul>
+    </div>
 </div>
 
-<button class="accordion">Settings</button>
-<div class="panel">
-    <p></p>
+<div class="accordion" id="Settings">
+    <button class="accordion-header">Settings</button>
+    <div class="accordion-content">
+        <p>Here you can change some of your personal configurations such as:
+        <ul>
+            <li> password (it must not contain whitespaces)</li>
+            <li> nickname</li>
+            <li> accent color (to highlight your team, drivers and buttons)</li>
+            <li> turn on/off notifications alerting you 1h before current bet's deadline expires</li>
+            <li> enable/disable dark mode</li>
+        </ul>
+        </p>
+    </div>
 </div>
 
-<button class="accordion">Summer Market</button>
-<div class="panel">
-    <p></p>
+<div class="accordion" id="market">
+    <button class="accordion-header">Summer Market</button>
+    <div class="accordion-content">
+        <p>Summer Market takes place during F1 summer break.</p>
+        <p>During this time frame players can sell <b>one</b> driver to buy a different one.</p>
+        <p>Drivers' price will be updated based on the results of the current season, it could happen that the selling
+            price for a driver might be different from the one spent at the beginning of the season.</p>
+        <p>Same thing can happen for buying prices, so think carefully about this because once the summer break ends any
+            trade operation will be considered as final and non-revertible.</p>
+        <p>At the start the page will look like this:</p>
+        <img src="assets/market1.png" height="50%" width="50%"/>
+        <ol>
+            <li>Countdown for market closure</li>
+            <li>Available Binottis</li>
+            <li>List of drivers, sorted by updated price. Highlighted drivers are the already owned ones.</li>
+        </ol>
+        <p>To create a market operation players must first select one of the drivers in their possession, then
+            the number of the binottis will be updated and it will be possible to buy another driver among the
+            affordable ones.</p>
+        <p>Remember: binottis saved during player creation will count too.</p>
+        <p>Once the new driver has been chosen it will be possible to save the operation.</p>
+        <p>Players can revert the operation at any time during the summer break, just click on the discard button at the
+            bottom to restore the initial situation.</p>
+        <p>If no operation has been saved by the time the summer breaks ends, no change will be applied to the team.</p>
+        <p>A proper market operation should look like this:</p>
+        <img src="assets/market2.png" height="50%" width="50%"/>
+        <ol>
+            <li>Driver to trade</li>
+            <li>Driver selected as replacement</li>
+            <li>Discard button, to delete any market operation saved so far</li>
+            <li>Save button, to store the current market operation</li>
+        </ol>
+    </div>
 </div>
 
-<button class="accordion">Points assignment</button>
-<div class="panel">
-    <p></p>
+<div class="accordion" id="points">
+    <button class="accordion-header">FAQ</button>
+    <div class="accordion-content"><p></p>
+        <p><b>What if a driver gets replaced mid-season?</b></p>
+        <p>The replacing driver will be automatically assigned to each team that owned the replaced one and, from that
+            time on, he will be the one bringing points to the team.</p>
+        <p></p>
+        <p><b>What if my driver can't drive for one or more races?</b></p>
+        <p>All the points earned by whoever will replace that driver will be counted as they were earned by the replaced
+            driver itself.</p>
+        <p><b>What about penalties assigned after qualifying or race?</b></p>
+        <p>Points calculation will be done only once everything is settled. <br/>
+            This means that for qualifying we look at the actual starting grid, not the order of arrival.</br>
+            For race we wait until FIA decided about any pending action (it may take up to 1 day).</p>
+        <p><b>One or more drivers are starting from the pit lane, how that will count?</b></p>
+        <p>Starting from the pit lane means starting in the last position (20th).<br/>
+        If there are more drivers starting from the pit, they will be anyway ordered as they can't start all toghether.<br/>
+        That order will be taken into account, deciding for 19th, 18th...</p>
+        <p><b>I've forgot to place my very first bet, what will happen?</b></p>
+        <p>Usually, in case of missed bet, player gets <b>-5 points</b> and inherits the same bet placed for the last race.
+            This will allow the player to anyway earn points from the upcoming race.<br/>
+            In this particular case, since there was no previous race (and bet), the player will only get <b>-5 points</b></p>
+    </div>
 </div>
-
 <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    document.addEventListener("DOMContentLoaded", () => {
+        const accordions = document.querySelectorAll(".accordion");
+        const headers = document.querySelectorAll(".accordion-header");
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
+        headers.forEach((header) => {
+            header.addEventListener("click", () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle("active");
+            });
+        });
+
+        if (window.location.hash) {
+            const targetAccordion = document.querySelector(window.location.hash);
+            if (targetAccordion) {
+                const content = targetAccordion.querySelector(".accordion-content");
+                content.classList.add("active");
+            }
+        }
+
+        window.addEventListener("hashchange", () => {
+            if (window.location.hash) {
+                const targetAccordion = document.querySelector(window.location.hash);
+                if (targetAccordion) {
+                    const content = targetAccordion.querySelector(".accordion-content");
+                    content.classList.add("active");
+                }
             }
         });
-    }
+    });
 </script>
 
 </body>
