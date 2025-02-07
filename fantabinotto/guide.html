@@ -40,15 +40,15 @@
 
 <h2>Guide</h2>
 
-<p>Click on the links below to open a specific accordion:</p>
-<ul>
-    <li><a href="#home">Open Accordion 1</a></li>
-    <li><a href="#teams">Open Accordion 2</a></li>
-    <li><a href="#drivers">Open Accordion 3</a></li>
-</ul>
+<!--<p>Click on the links below to open a specific accordion:</p>-->
+<!--<ul>-->
+<!--    <li><a href="#home">Open Accordion 1</a></li>-->
+<!--    <li><a href="#teams">Open Accordion 2</a></li>-->
+<!--    <li><a href="#drivers">Open Accordion 3</a></li>-->
+<!--</ul>-->
 
 
-<div class="accordion" id="home">
+<div class="accordion" id="Home">
     <button class="accordion-header">Home</button>
     <div class="accordion-content">
         <img src="assets/dash1.png" height="50%" width="50%"/>
@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<div class="accordion" id="teams">
+<div class="accordion" id="Teams">
     <button class="accordion-header">Teams</button>
     <div class="accordion-content">
         <p>Teams' standing sorted by points.<br/>
@@ -70,36 +70,42 @@
             <li>List of teams in league. Your team will be highlighted using the color you chose during player creation
                 or in the settings page.
             </li>
-            <li>Open a dialog describing all the icons you can see in the results for each team. Not visible until the
-                first race has ended.
+            <li>Tap on any card to see how the team performed in the previous races.<br/>
+                Here you can see points scored by drivers of the team for each race. Far right column is the position of
+                the
+                team and how it changed compared to last race.
             </li>
             <li>Open a dialog showing a summary of the points earned by each team in the last race.<br/>
                 Next to the points are shown the icons for each event that contributed to the final result.
+                <br/>
+                <img src="assets/podium.png" height="50%" width="50%"/>
             </li>
+            <li>Open a dialog describing all the icons you can see in the results for each team.
+                <br/>
+                <img src="assets/teams2.png" height="50%" width="50%"/>
+            </li>
+
         </ol>
-        <img src="assets/teams2.png" height="50%" width="50%"/>
-        <p>Tap on any card to see how the team performed in the previous races.</p>
-        <img src="assets/placeholder.png" height="50%" width="50%"/>
-        <p>Here you can see points scored by drivers of the team for each race. Far right column is the position of the
-            team and how it changed compared to last race.</p>
+
+
     </div>
 </div>
 
-<div class="accordion" id="drivers">
+<div class="accordion" id="Drivers">
     <button class="accordion-header">Drivers</button>
     <div class="accordion-content">
         <p>Drivers' standing sorted by points.</p>
         <p>Pull to refresh the page some time after the race!</p>
-        <img src="assets/drivers1.png" height="50%" width="50%"/>
         <p>Owned drivers will be highlighted using the color you chose during player creation
             or in the settings page.<br/>
             Drivers in your team will be highlighted using the color you chose during player creation or in the settings
             page.</p>
         <p>If a player gets permanently replaced mid-season, his card will stay with the label "replaced by" and it
-            won't be
-            updated any longer.<br/>
-            On the other hand, a new card will be added for the new driver.</p>
+            won't receive any more update.<br/>
+            A new card will be added for the new driver.</p>
         <p>Tap on any driver's card to see the results for each race.</p>
+        <img src="assets/drivers1.png" height="50%" width="50%"/>
+        <p></p>
         <p>If a driver gets temporarily replaced by someone else for one or more races, in the driver's details the
             following icon will appear next to the points earned for those races.</p>
         <img src="assets/recycle.png"/>
@@ -107,7 +113,34 @@
     </div>
 </div>
 
-<div class="accordion" id="bet">
+<div class="accordion" id="Races">
+    <button class="accordion-header">Races</button>
+    <div class="accordion-content">
+        <p>In this page are listed all the races sorted by date.</p>
+        <p>Pull to refresh!</p>
+        <img src="assets/races1.png" height="50%" width="50%"/>
+        <ol>
+            <li>Race card with date and flag of the corresponding race.</li>
+            <li>This icon means that the race has ended.</li>
+        </ol>
+        <p><b>Actions available on cards:</b></p>
+        <ul>
+            <li>Single tap to flip it and see the bets for the race.
+                <p></p>
+                <img src="assets/raceDetails.png" height="50%" width="50%"/>
+                <p>Here you can see teams' bets for the race. They won't be available before qualifying.<br/>
+                    Prior to the end of the race, only bets will show up, but once the race has ended and points updated
+                    (it may take some time), next to each bet there might be this icon
+                    <img src="assets/bulls.png"/> if the bet was successful otherwise there will be the actual result of the driver.</p>
+                <img src="assets/afterRace.png" height="50%" width="50%"/>
+                <p>Do not forget to come back here after the race to check how all teams performed!</p>
+            </li>
+            <li>Long tap (2 seconds) on a race's card will take you to the f1 official site for the race</li>
+        </ul>
+    </div>
+</div>
+
+<div class="accordion" id="Bet">
     <button class="accordion-header">Bet</button>
     <div class="accordion-content">
         <p>Bets for a race will open as soon as the previous grand prix ends.</p>
@@ -157,7 +190,8 @@
                 </p>
             </li>
             <li>
-                Betting lines for driver: here you put your numbers for each driver, the icon on the red will turn into red if
+                Betting lines for driver: here you put your numbers for each driver, the icon on the red will turn into
+                red if
                 the bet is not correct.
             </li>
             <li>
@@ -179,35 +213,10 @@
                 </p>
             </li>
         </ol>
-    </div>
-</div>
-
-<div class="accordion" id="races">
-    <button class="accordion-header">Races</button>
-    <div class="accordion-content">
-        <p>In this page are listed all the races sorted by date.</p>
-        <p>Pull to refresh!</p>
-        <img src="assets/races1.png" height="50%" width="50%"/>
-        <ol>
-            <li>Race card with date and flag of the corresponding race.</li>
-            <li>This icon means that the race has ended.</li>
-        </ol>
-        <p><b>Actions available on cards:</b></p>
-        <ul>
-            <li>Single tap to flip it and see the bets for the race.
-                <p></p>
-                <img src="assets/placeholder.png">
-                <p>Here you can see teams' bets for the race. They won't be available before qualifying.<br/>
-                    Before the end of the race, only bets will show up, but once the race is complete and points updated
-                    (it may
-                    take some time), next to each bet it will be shown the actual result for the driver if the bet
-                    didn't match
-                    or this icon
-                    <img src="assets/bulls.png"/> if the bet was correct.</p>
-                <p>Do not forget to come back here after the race to check how all teams performed!</p>
-            </li>
-            <li>Long tap (2 seconds) on a race's card will take you to the f1 official site for the race</li>
-        </ul>
+        <p>It is possible to change the bet as many times as you want but, once the countdown expires, the bet placed so
+            far will be considered as final.</p>
+        <p>This is how the bet screen will look then:</p>
+        <img src="assets/closedBet.png" height="50%" width="50%"/>
     </div>
 </div>
 
@@ -226,15 +235,13 @@
     </div>
 </div>
 
-<div class="accordion" id="market">
+<div class="accordion" id="Market">
     <button class="accordion-header">Summer Market</button>
     <div class="accordion-content">
         <p>Summer Market takes place during F1 summer break.</p>
         <p>During this time frame players can sell <b>one</b> driver to buy a different one.</p>
-        <p>Drivers' price will be updated based on the results of the current season, it could happen that the selling
-            price for a driver might be different from the one spent at the beginning of the season.</p>
-        <p>Same thing can happen for buying prices, so think carefully about this because once the summer break ends any
-            trade operation will be considered as final and non-revertible.</p>
+        <p>Drivers' price will be updated based on the results of the current season, meaning that the selling and buying prices
+            for a driver can differ from the one spent at the beginning of the season.</p>
         <p>At the start the page will look like this:</p>
         <img src="assets/market1.png" height="50%" width="50%"/>
         <ol>
@@ -261,7 +268,7 @@
     </div>
 </div>
 
-<div class="accordion" id="points">
+<div class="accordion" id="Info">
     <button class="accordion-header">FAQ</button>
     <div class="accordion-content"><p></p>
         <p><b>What if a driver gets replaced mid-season?</b></p>
@@ -277,14 +284,18 @@
             For race we wait until FIA decided about any pending action (it may take up to 1 day).</p>
         <p><b>One or more drivers are starting from the pit lane, how that will count?</b></p>
         <p>Starting from the pit lane means starting in the last position (20th).<br/>
-        If there are more drivers starting from the pit, they will be anyway ordered as they can't start all toghether.<br/>
-        That order will be taken into account, deciding for 19th, 18th...</p>
+            If there are more drivers starting from the pit, they will be anyway ordered as they can't start all
+            toghether.<br/>
+            That order will be taken into account, deciding for 19th, 18th...</p>
         <p><b>I've forgot to place my very first bet, what will happen?</b></p>
-        <p>Usually, in case of missed bet, player gets <b>-5 points</b> and inherits the same bet placed for the last race.
+        <p>Usually, in case of missed bet, player gets <b>-5 points</b> and inherits the same bet placed for the last
+            race.
             This will allow the player to anyway earn points from the upcoming race.<br/>
-            In this particular case, since there was no previous race (and bet), the player will only get <b>-5 points</b></p>
+            In this particular case, since there was no previous race (and bet), the player will only get <b>-5
+                points</b></p>
     </div>
 </div>
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const accordions = document.querySelectorAll(".accordion");
