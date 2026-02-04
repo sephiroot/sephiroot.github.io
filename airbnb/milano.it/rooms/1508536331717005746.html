@@ -1047,16 +1047,27 @@
         top: 0px !important;
         z-index: 3 !important;
         width: calc(100% - var(--scrollbar-gutter, 0%)) !important;
+        visibility: visible !important;
         animation-name: keyframe_1b8bzh6 !important;
         animation-duration: 100ms !important;
-        visibility: hidden !important;
-      }
-      @media (min-width: 744px) {
-        ._n0u29e9 {
-          height: var(--navigation-bar-offset, 80px) !important;
-        }
-      }
-      ._dmn8hc {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+      }                  @media (min-width: 744px) {
+                    ._n0u29e9 {
+                      height: var(--navigation-bar-offset, 80px) !important;
+                    }
+                  }
+                  /* Hide the navigation buttons on small screens */
+                  @media (max-width: 743px) {
+                    .csjaj27 {
+                      transform: translateY(0px) !important;
+                    }
+                  }
+                  /* Force display block for the _13nmyp class on small screens (original requirement) */
+                  ._13nmyp {
+                    display: block !important;
+                  }      ._dmn8hc {
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
@@ -8056,39 +8067,28 @@
         "stylesheets": [""]
       }
     </script>
-      <style type="text/css">
-        /* Custom responsive adjustments */
-        img {
-            max-width: 100% !important;
-            height: auto !important;
-            display: block !important; /* Prevents extra space below images */
-        }
-
-        /* For smaller screens, make sure main content wrappers are full width */
-        @media (max-width: 743px) { /* Targeting screens smaller than typical tablet breakpoint */
-            /* Adjusting column widths to stack */
-            ._1a6d9c4, ._16e70jgn, ._1s21a6e2, ._vd6w38n {
-                width: 100% !important;
-                /* Remove padding that might cause overflow on very small screens, or adjust it */
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                flex-direction: column !important; /* If they are flex containers */
+    <style type="text/css">
+        /* Custom styles to ensure Airbnb logo and search bar visibility, and hide navigation on small screens */
+        @media (max-width: 743px) {
+            /* Ensure the main header container (containing logo and search bar) is visible and correctly laid out */
+            ._n0u29e9 {
+                visibility: visible !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
             }
 
-            /* Ensure flex items wrap if they are within a flex container */
-            [class*="_flex_"], [class*="display_flex_"] { /* Generic pattern for flex containers */
-                flex-wrap: wrap !important;
+            /* Hide the navigation buttons ("Foto", "Servizi", etc.) */
+            .cupke1j {
+                display: none !important;
             }
 
-            /* Specific element that might be fixed width and break layout */
-            div[style*="width: 50%;"], div[style*="width: 25%;"] {
-                width: 100% !important;
-                position: static !important; /* Remove absolute positioning that might break flow */
+            /* Correct the position of the search bar, ensuring it's not translated off-screen */
+            .csjaj27 {
+                transform: translateY(0px) !important;
             }
 
-            /* Force display block for the _13nmyp class on small screens */
+            /* Ensure _13nmyp is visible on small screens if it's part of the header that needs to show */
             ._13nmyp {
                 display: block !important;
             }
