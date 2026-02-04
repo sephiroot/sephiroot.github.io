@@ -8056,7 +8056,45 @@
         "stylesheets": [""]
       }
     </script>
-  </head>
+      <style type="text/css">
+        /* Custom responsive adjustments */
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+            display: block !important; /* Prevents extra space below images */
+        }
+
+        /* For smaller screens, make sure main content wrappers are full width */
+        @media (max-width: 743px) { /* Targeting screens smaller than typical tablet breakpoint */
+            /* Adjusting column widths to stack */
+            ._1a6d9c4, ._16e70jgn, ._1s21a6e2, ._vd6w38n {
+                width: 100% !important;
+                /* Remove padding that might cause overflow on very small screens, or adjust it */
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                flex-direction: column !important; /* If they are flex containers */
+            }
+
+            /* Ensure flex items wrap if they are within a flex container */
+            [class*="_flex_"], [class*="display_flex_"] { /* Generic pattern for flex containers */
+                flex-wrap: wrap !important;
+            }
+
+            /* Specific element that might be fixed width and break layout */
+            div[style*="width: 50%;"], div[style*="width: 25%;"] {
+                width: 100% !important;
+                position: static !important; /* Remove absolute positioning that might break flow */
+            }
+
+            /* Force display block for the _13nmyp class on small screens */
+            ._13nmyp {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
   <body class="with-new-header">
     <div id="site-skip-links">
       <a
@@ -12359,15 +12397,14 @@
                                                     >
                                                       <button
                                                         data-testid="pdp-show-all-reviews-button"
-                                                        aria-label="Mostra tutte le 25 recensioni, Apre la finestra di dialogo modale"
+                                                        aria-label="Nessuna recensione ancora"
                                                         type="button"
                                                         class="l1ovpqvx atm_npmupv_14b5rvc_10saat9 atm_4s4swg_18xq13z_10saat9 atm_u9em2p_1r3889l_10saat9 atm_1ezpcqw_1u41vd9_10saat9 atm_fyjbsv_c4n71i_10saat9 atm_1rna0z7_1uk391_10saat9 b1l5jtj6 atm_9j_tlke0l atm_9s_1o8liyq atm_gi_idpfg4 atm_mk_h2mmj6 atm_r3_1h6ojuz atm_rd_glywfm atm_3f_11akh3i atm_70_5j5alw atm_vy_1wugsn5 atm_l8_1cudcw5 atm_tl_1gw4zv3 atm_9j_13gfvf7_1o5j5ji c1xbk6gl atm_bx_nm7nsd atm_c8_eyeb2l atm_g3_k6hx5t atm_cs_1mexzig atm_26_1i7d4jj atm_20_13viflf atm_7l_1ca5zq3 atm_5j_15khq9x atm_4b_1oq6qme atm_6h_dpi2ty atm_66_nqa18y atm_kd_glywfm atm_lo_1rkbgn1 atm_ll_1whkk1i atm_le_aum3fz atm_lk_nw3rbs atm_jb_16cl52u atm_uc_krjvw atm_r2_1j28jx2 atm_1pgz0hy_d07h9u atm_16gn1vh_3w7ag0 atm_1nv7vqx_1emqlh9 atm_90hitl_dlk8xv atm_1artg4w_1tcgj5g atm_q3c8am_dlk8xv atm_17k63hd_1tcgj5g atm_bp5prx_15e782c atm_1ycj583_idpfg4 atm_pbz4zy_14qkg2y atm_143zgh5_hfv0h6 atm_15vesau_14qkg2y atm_jzguh3_hfv0h6 atm_ldn80t_vjbwx7 atm_b9xxwi_hfv0h6 atm_114pxjm_vjbwx7 atm_182m1vx_hfv0h6 atm_1h1macq_14qkg2y atm_j7efc6_1r9ct3d atm_8w_1t7jgwy atm_uc_dvte3h_wc6gzy atm_uc_glywfm__1rrf6b5 atm_kd_glywfm_1w3cfyq atm_uc_1wx0j5_1w3cfyq atm_4b_1r2f4og_1w3cfyq atm_26_1fudmwu_1w3cfyq atm_7l_1jopa2a_1w3cfyq atm_70_fusnev_1w3cfyq atm_3f_glywfm_e4a3ld atm_l8_idpfg4_e4a3ld atm_gi_idpfg4_e4a3ld atm_3f_glywfm_1r4qscq atm_kd_glywfm_6y7yyg atm_uc_glywfm_1w3cfyq_1rrf6b5 atm_4b_1ymcg8c_1nos8r_uv4tnr atm_26_asnl7k_1nos8r_uv4tnr atm_7l_1etjrq5_1nos8r_uv4tnr atm_tr_c3l1w2_z5n1qr_uv4tnr atm_4b_1cpdnk2_pd0br1_uv4tnr atm_26_zp0x24_pd0br1_uv4tnr atm_7l_1n4947f_pd0br1_uv4tnr atm_4b_13y81g2_4fughm_uv4tnr atm_26_zsif75_4fughm_uv4tnr atm_7l_3x6mlv_4fughm_uv4tnr atm_tr_glywfm_4fughm_uv4tnr atm_4b_1cpdnk2_csw3t1 atm_26_zp0x24_csw3t1 atm_7l_1n4947f_csw3t1 atm_tr_c3l1w2_csw3t1 atm_7l_1jopa2a_pfnrn2 atm_4b_13y81g2_1o5j5ji atm_26_zsif75_1o5j5ji atm_7l_3x6mlv_1o5j5ji atm_k4_kb7nvz_1o5j5ji atm_tr_glywfm_1o5j5ji dir dir-ltr"
                                                       >
                                                         <span
                                                           data-button-content="true"
                                                           class="bpg39da atm_9s_1cw04bb atm_rd_1kw7nm4 atm_vz_kcpwjc atm_uc_kkvtv4 dir dir-ltr"
-                                                          >Mostra tutte le 25
-                                                          recensioni</span
+                                                          >Nessuna recensione ancora</span
                                                         >
                                                       </button>
                                                     </div>
@@ -12728,7 +12765,7 @@
                                                               <span
                                                                 class="s1vpsye7 atm_9s_1txwivl atm_cx_iv6dct atm_h_1h6ojuz atm_c8_18p4cis atm_g3_19r9dmc atm_fr_monc8 atm_cs_1dh25pa atm_7l_xeyu1p dir dir-ltr"
                                                                 ><span
-                                                                  >Host</span
+                                                                  >Salvatore</span
                                                                 ></span
                                                               >
                                                             </div>
@@ -12743,7 +12780,7 @@
                                                               <div>
                                                                 <span
                                                                   class="a8jt5op atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr"
-                                                                  >46
+                                                                  >0
                                                                   recensioni</span
                                                                 >
                                                                 <div
@@ -12756,7 +12793,7 @@
                                                                   <span
                                                                     data-testid="recensioni-stat-heading"
                                                                     class="vqkyk4b atm_9s_1txwivl atm_cx_yh40bf atm_h_1h6ojuz atm_c8_imiupd atm_g3_1slol46 dir dir-ltr"
-                                                                    >46</span
+                                                                    >0</span
                                                                   ><span
                                                                     class="lh1pygb atm_c8_oadj2n atm_g3_19ii325 atm_fr_4jg895 atm_cs_1mexzig dir dir-ltr"
                                                                     >recensioni</span
@@ -12770,9 +12807,7 @@
                                                               <div>
                                                                 <span
                                                                   class="a8jt5op atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr"
-                                                                  >Valutazione
-                                                                  media di 4,95
-                                                                  su 5</span
+                                                                  >Nessuna valutazione ancora</span
                                                                 >
                                                                 <div
                                                                   class="s1oxm7bp atm_9s_1txwivl atm_ar_1bp4okc atm_cx_1f3tg6m atm_h_1y6m0gg atm_fc_1h6ojuz atm_c8_21sjza atm_fr_1t2fc69 atm_cs_1trfmku atm_g3_1slol46 atm_iy_10mcmc8 dir dir-ltr"
@@ -12787,7 +12822,7 @@
                                                                     ><div
                                                                       class="rz5w5y3 atm_9s_1txwivl atm_ar_vrvcex atm_h_1h6ojuz atm_cx_yh40bf dir dir-ltr"
                                                                     >
-                                                                      4,95<svg
+                                                                      0<svg
                                                                         xmlns="http://www.w3.org/2000/svg"
                                                                         viewBox="0 0 16 16"
                                                                         style="
@@ -12817,8 +12852,7 @@
                                                               <div>
                                                                 <span
                                                                   class="a8jt5op atm_3f_idpfg4 atm_7h_hxbz6r atm_7i_ysn8ba atm_e2_t94yts atm_ks_zryt35 atm_l8_idpfg4 atm_mk_stnw88 atm_vv_1q9ccgz atm_vy_t94yts dir dir-ltr"
-                                                                  >13 anni da
-                                                                  host</span
+                                                                  >host da poco</span
                                                                 >
                                                                 <div
                                                                   class="s1oxm7bp atm_9s_1txwivl atm_ar_1bp4okc atm_cx_1f3tg6m atm_h_1y6m0gg atm_fc_1h6ojuz atm_c8_21sjza atm_fr_1t2fc69 atm_cs_1trfmku atm_g3_1slol46 atm_iy_10mcmc8 dir dir-ltr"
@@ -12827,16 +12861,6 @@
                                                                   "
                                                                   aria-hidden="true"
                                                                 >
-                                                                  <span
-                                                                    data-testid="anni da host-stat-heading"
-                                                                    class="vqkyk4b atm_9s_1txwivl atm_cx_yh40bf atm_h_1h6ojuz atm_c8_imiupd atm_g3_1slol46 dir dir-ltr"
-                                                                    >13</span
-                                                                  ><span
-                                                                    class="lh1pygb atm_c8_oadj2n atm_g3_19ii325 atm_fr_4jg895 atm_cs_1mexzig dir dir-ltr"
-                                                                    >anni da
-                                                                    host</span
-                                                                  >
-                                                                </div>
                                                               </div>
                                                             </div>
                                                           </div>
@@ -12882,7 +12906,7 @@
                                                                 class="hn2ekpr atm_lo_1l7b3ar dir dir-ltr"
                                                               >
                                                                 Lavoro:
-                                                                Medico-sociale
+                                                                Studente
                                                               </div>
                                                             </div>
                                                             <div
@@ -12908,63 +12932,11 @@
                                                               <div
                                                                 class="hn2ekpr atm_lo_1l7b3ar dir dir-ltr"
                                                               >
-                                                                La mia canzone
-                                                                preferita alle
-                                                                superiori: Texas
+                                                               Provengo dal Sud Italia ma vivo e studio a Milano
                                                               </div>
                                                             </div>
                                                           </div>
-                                                          <div
-                                                            class="a3xqjte atm_c8_3w7ag0 atm_g3_1emqlh9 atm_fr_helst atm_kz_1hnarqo dir dir-ltr"
-                                                          >
-                                                            <div
-                                                              style="
-                                                                line-height: 1.5rem;
-                                                              "
-                                                            >
-                                                              <span
-                                                                ><span
-                                                                  class="l1h825yc atm_kd_adww2_24z95b dir dir-ltr"
-                                                                  >Ex giramondo,
-                                                                  entusiasta, mi
-                                                                  piacciono
-                                                                  tanto gli
-                                                                  incontri
-                                                                  intensi e
-                                                                  sorprendenti
-                                                                  quanto i
-                                                                  magnifici
-                                                                  momenti di
-                                                                  solitudine!
-                                                                  Ora che ho una
-                                                                  famiglia, ci
-                                                                  sistemiamo
-                                                                  nella parte
-                                                                  occidentale
-                                                                  dell'Ile de
-                                                                  France, nel
-                                                                  quartiere
-                                                                  Yvelines,
-                                                                  vicino alla
-                                                                  foresta.
-                                                                  Auguro alla
-                                                                  persona che
-                                                                  soggiornerà
-                                                                  nel mio
-                                                                  piccolo
-                                                                  appartamento
-                                                                  di vivere
-                                                                  tanti bei
-                                                                  momenti
-                                                                  Milanoni
-                                                                  quanti ne ho
-                                                                  vissuti io in
-                                                                  tanti
-                                                                  anni.</span
-                                                                ></span
-                                                              >
-                                                            </div>
-                                                          </div>
+                                                      
                                                         </div>
                                                       </div>
                                                       <div
@@ -20593,19 +20565,6 @@
                                 "modalHeading": null,
                                 "overallCount": 25,
                                 "overallRating": 5,
-                                "seeAllReviewsButton": {
-                                  "__typename": "BasicListItem",
-                                  "title": "Mostra tutte le 25 recensioni",
-                                  "accessibilityLabel": "Mostra tutte le 25 recensioni, Apre la finestra di dialogo modale",
-                                  "loggingEventData": {
-                                    "__typename": "LoggingEventData",
-                                    "loggingId": "pdp.reviews.showAll",
-                                    "experiments": null,
-                                    "eventData": null,
-                                    "eventDataSchemaName": null,
-                                    "section": "reviews",
-                                    "component": "showAll"
-                                  }
                                 },
                                 "seeMoreReviewsLoggingEventData": {
                                   "__typename": "LoggingEventData",
