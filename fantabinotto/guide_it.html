@@ -1,248 +1,341 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
 
-        .accordion {
-            margin-bottom: 10px;
-        }
+      .accordion {
+        margin-bottom: 10px;
+      }
 
-        .accordion-header {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            border: none;
-            text-align: left;
-            outline: none;
-            width: 100%;
-        }
+      .accordion-header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        text-align: left;
+        outline: none;
+        width: 100%;
+      }
 
-        .accordion-content {
-            display: none;
-            padding: 10px;
-            background-color: #f1f1f1;
-            border: 1px solid #ddd;
-            border-top: none;
-        }
+      .accordion-content {
+        display: none;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+        border-top: none;
+      }
 
-        .accordion-content.active {
-            display: block;
-        }
+      .accordion-content.active {
+        display: block;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <h2>Guida</h2>
 
-<h2>Guida</h2>
-
-<div class="accordion" id="Home">
-    <button class="accordion-header">Home</button>
-    <div class="accordion-content">
-        <img src="assets/dash1.png" height="50%" width="50%"/>
+    <div class="accordion" id="Home">
+      <button class="accordion-header">Home</button>
+      <div class="accordion-content">
+        <img src="assets/dash1.png" height="50%" width="50%" />
         <ol>
-            <li>Logo della squadra</li>
-            <li>Prestazioni della squadra</li>
-            <li>Prossima gara e relativo conto alla rovescia</li>
+          <li>Logo della squadra</li>
+          <li>Prestazioni della squadra</li>
+          <li>Prossima gara e relativo conto alla rovescia</li>
         </ol>
+      </div>
     </div>
-</div>
 
-<div class="accordion" id="Teams">
-    <button class="accordion-header">Squadre</button>
-    <div class="accordion-content">
-        <p>Classifica delle squadre ordinata per punti.<br/>
-            Tira verso il basso per aggiornare la pagina qualche tempo dopo la gara!</p>
-        <img src="assets/teams1.png" height="50%" width="50%"/>
+    <div class="accordion" id="Teams">
+      <button class="accordion-header">Squadre</button>
+      <div class="accordion-content">
+        <p>
+          Classifica delle squadre ordinata per punti.<br />
+          Tira verso il basso per aggiornare la pagina qualche tempo dopo la
+          gara!
+        </p>
+        <img src="assets/teams1.png" height="50%" width="50%" />
         <ol>
-            <li>Elenco delle squadre nella lega. La tua squadra sarà evidenziata con il colore scelto durante la creazione del player o nella pagina impostazioni.</li>
-            <li>Tocca una scheda per vedere come la squadra si è comportata nelle gare precedenti.<br/>
-                Qui puoi vedere i punti ottenuti dai piloti per ogni gara. L'ultima colonna a destra mostra la posizione della squadra e la variazione rispetto alla gara precedente.</li>
-            <li>Apre una finestra con il riepilogo dei punti ottenuti da ciascuna squadra nell'ultima gara.<br/>
-                Accanto ai punti sono mostrate le icone relative agli eventi che hanno contribuito al risultato finale.<br/>
-                <img src="assets/podium.png" height="50%" width="50%"/>
-            </li>
-            <li>Apre una finestra che descrive tutte le icone visibili nei risultati di ogni squadra.<br/>
-                <img src="assets/teams2.png" height="50%" width="50%"/>
-            </li>
+          <li>
+            Elenco delle squadre nella lega. La tua squadra sarà evidenziata con
+            il colore scelto durante la creazione del player o nella pagina
+            impostazioni.
+          </li>
+          <li>
+            Tocca una scheda per vedere come la squadra si è comportata nelle
+            gare precedenti.<br />
+            Qui puoi vedere i punti ottenuti dai piloti per ogni gara. L'ultima
+            colonna a destra mostra la posizione della squadra e la variazione
+            rispetto alla gara precedente.
+          </li>
+          <li>
+            Apre una finestra con il riepilogo dei punti ottenuti da ciascuna
+            squadra nell'ultima gara.<br />
+            Accanto ai punti sono mostrate le icone relative agli eventi che
+            hanno contribuito al risultato finale.<br />
+            <img src="assets/podium.png" height="50%" width="50%" />
+          </li>
+          <li>
+            Apre una finestra che descrive tutte le icone visibili nei risultati
+            di ogni squadra.<br />
+            <img src="assets/teams2.png" height="50%" width="50%" />
+          </li>
         </ol>
+      </div>
     </div>
-</div>
 
-<div class="accordion" id="Drivers">
-    <button class="accordion-header">Piloti</button>
-    <div class="accordion-content">
+    <div class="accordion" id="Drivers">
+      <button class="accordion-header">Piloti</button>
+      <div class="accordion-content">
         <p>Classifica piloti ordinata per punti.</p>
-        <p>Tira verso il basso per aggiornare la pagina qualche tempo dopo la gara!</p>
-        <p>I piloti posseduti saranno evidenziati con il colore scelto durante la creazione del player o nelle impostazioni.<br/>
-            I piloti della tua squadra saranno evidenziati con il colore scelto durante la creazione del player o nelle impostazioni.</p>
-        <p>Se un pilota viene sostituito permanentemente a metà stagione, la sua scheda rimarrà con l'etichetta "replaced by" e non riceverà più aggiornamenti.<br/>
-            Verrà aggiunta una nuova scheda per il nuovo pilota.</p>
+        <p>
+          Tira verso il basso per aggiornare la pagina qualche tempo dopo la
+          gara!
+        </p>
+        <p>
+          I piloti posseduti saranno evidenziati con il colore scelto durante la
+          creazione del player o nelle impostazioni.<br />
+          I piloti della tua squadra saranno evidenziati con il colore scelto
+          durante la creazione del player o nelle impostazioni.
+        </p>
+        <p>
+          Se un pilota viene sostituito permanentemente a metà stagione, la sua
+          scheda rimarrà con l'etichetta "replaced by" e non riceverà più
+          aggiornamenti.<br />
+          Verrà aggiunta una nuova scheda per il nuovo pilota.
+        </p>
         <p>Tocca la scheda di un pilota per vedere i risultati di ogni gara.</p>
-        <img src="assets/drivers1.png" height="50%" width="50%"/>
-        <p>Se un pilota viene sostituito temporaneamente per una o più gare, nei dettagli apparirà un'icona accanto ai punti ottenuti in quelle gare.</p>
-        <img src="assets/recycle.png"/>
-        <p>I punti ottenuti dal sostituto contribuiranno comunque alle squadre che possiedono il pilota sostituito.</p>
+        <img src="assets/drivers1.png" height="50%" width="50%" />
+        <p>
+          Se un pilota viene sostituito temporaneamente per una o più gare, nei
+          dettagli apparirà un'icona accanto ai punti ottenuti in quelle gare.
+        </p>
+        <img src="assets/recycle.png" />
+        <p>
+          I punti ottenuti dal sostituto contribuiranno comunque alle squadre
+          che possiedono il pilota sostituito.
+        </p>
+      </div>
     </div>
-</div>
 
-<div class="accordion" id="Races">
-    <button class="accordion-header">Gare</button>
-    <div class="accordion-content">
+    <div class="accordion" id="Races">
+      <button class="accordion-header">Gare</button>
+      <div class="accordion-content">
         <p>In questa pagina sono elencate tutte le gare ordinate per data.</p>
         <p>Tira verso il basso per aggiornare!</p>
-        <img src="assets/races1.png" height="50%" width="50%"/>
+        <img src="assets/races1.png" height="50%" width="50%" />
         <ol>
-            <li>Scheda della gara con data e bandiera corrispondente.</li>
-            <li>Questa icona indica che la gara è terminata.</li>
+          <li>Scheda della gara con data e bandiera corrispondente.</li>
+          <li>Questa icona indica che la gara è terminata.</li>
         </ol>
         <p><b>Azioni disponibili sulle schede:</b></p>
         <ul>
-            <li>Tocco singolo per girare la scheda e vedere le scommesse della gara.
-                <img src="assets/raceDetails.png" height="50%" width="50%"/>
-                <p>Qui puoi vedere le scommesse delle squadre. Non saranno disponibili prima delle qualifiche.<br/>
-                    Prima della fine della gara verranno mostrate solo le scommesse; una volta conclusa e aggiornati i punti (potrebbe richiedere tempo), accanto a ogni scommessa potrebbe apparire un'icona se corretta, altrimenti verrà mostrato il risultato reale del pilota.</p>
-                <img src="assets/afterRace.png" height="50%" width="50%"/>
-                <p>Non dimenticare di tornare qui dopo la gara per controllare i risultati di tutte le squadre!</p>
-            </li>
-            <li>Pressione prolungata (2 secondi) sulla scheda per aprire il sito ufficiale F1 della gara.</li>
+          <li>
+            Tocco singolo per girare la scheda e vedere le scommesse della gara.
+            <img src="assets/raceDetails.png" height="50%" width="50%" />
+            <p>
+              Qui puoi vedere le scommesse delle squadre. Non saranno
+              disponibili prima delle qualifiche.<br />
+              Prima della fine della gara verranno mostrate solo le scommesse;
+              una volta conclusa e aggiornati i punti (potrebbe richiedere
+              tempo), accanto a ogni scommessa potrebbe apparire un'icona se
+              corretta, altrimenti verrà mostrato il risultato reale del pilota.
+            </p>
+            <img src="assets/afterRace.png" height="50%" width="50%" />
+            <p>
+              Non dimenticare di tornare qui dopo la gara per controllare i
+              risultati di tutte le squadre!
+            </p>
+          </li>
+          <li>
+            Pressione prolungata (2 secondi) sulla scheda per aprire il sito
+            ufficiale F1 della gara.
+          </li>
         </ul>
+      </div>
     </div>
-</div>
 
-<div class="accordion" id="Bets">
-    <button class="accordion-header">Scommesse</button>
-    <div class="accordion-content">
-        <p>Le scommesse per una gara si aprono appena termina il Gran Premio precedente.</p>
-        <img src="assets/betPage.png" height="50%" width="50%"/>
+    <div class="accordion" id="Bets">
+      <button class="accordion-header">Scommesse</button>
+      <div class="accordion-content">
+        <p>
+          Le scommesse per una gara si aprono appena termina il Gran Premio
+          precedente.
+        </p>
+        <img src="assets/betPage.png" height="50%" width="50%" />
         <ol>
-            <li>Countdown: la scommessa deve essere inviata prima della scadenza. In caso contrario riceverai <b>-5 punti</b> e verrà ereditata la scommessa precedente. È possibile scommettere <b>fino a 1 ora prima delle qualifiche.</b></li>
-            <li>Data e nome della prossima gara</li>
-            <li>Stato della scommessa:
-                <p><span style="background-color: red; color: black"> non valida</span>: ci sono errori da correggere.</p>
-                <p><span style="background-color: yellow; color: black"> non salvata </span>: ci sono modifiche non salvate.</p>
-                <p>Nessun indicatore significa che la scommessa è corretta e salvata.</p>
-            </li>
-            <li>Indicatore capitano: devi selezionare un capitano prima di ogni gara. Se termina davanti al compagno di squadra ottieni <b>+2 punti</b>. Il capitano è obbligatorio.</li>
-            <li>Selettore capitano: clicca sul nome per selezionarlo.</li>
-            <li>Indicatore stato scommessa: se rosso ci sono errori.
-                <p>Regole:</p>
-                <ul>
-                    <li>Griglia/Gara/Sprint (se presente) sono obbligatorie</li>
-                    <li>I valori devono essere numeri da 1 a 20</li>
-                    <li>Non puoi inserire lo stesso risultato per entrambi i piloti</li>
-                </ul>
-            </li>
-            <li>Campi scommessa primo pilota</li>
-            <li>Campi scommessa secondo pilota</li>
-            <li>Testo di aiuto per scommesse duplicate</li>
-            <li>Pulsante salva:
-                <img src="assets/save.png"/>
-                <p>Scommessa valida e salvabile</p>
-                <img src="assets/invalidBet.png"/>
-                <p>Scommessa non valida</p>
-                <img src="assets/outOfTime.png"/>
-                <p>Tempo scaduto, non modificabile</p>
-            </li>
+          <li>
+            Countdown: la scommessa deve essere inviata prima della scadenza. In
+            caso contrario riceverai <b>-5 punti</b> e verrà ereditata la
+            scommessa precedente. È possibile scommettere
+            <b>fino a 1 ora prima delle qualifiche.</b>
+          </li>
+          <li>Data e nome della prossima gara</li>
+          <li>
+            Stato della scommessa:
+            <p>
+              <span style="background-color: red; color: black">
+                non valida</span
+              >: ci sono errori da correggere.
+            </p>
+            <p>
+              <span style="background-color: yellow; color: black">
+                non salvata </span
+              >: ci sono modifiche non salvate.
+            </p>
+            <p>
+              Nessun indicatore significa che la scommessa è corretta e salvata.
+            </p>
+          </li>
+          <li>
+            Indicatore capitano: devi selezionare un capitano prima di ogni
+            gara. Se termina davanti al compagno di squadra ottieni
+            <b>+2 punti</b>. Il capitano è obbligatorio.
+          </li>
+          <li>Selettore capitano: clicca sul nome per selezionarlo.</li>
+          <li>
+            Indicatore stato scommessa: se rosso ci sono errori.
+            <p>Regole:</p>
+            <ul>
+              <li>Griglia/Gara/Sprint (se presente) sono obbligatorie</li>
+              <li>I valori devono essere numeri da 1 a 20</li>
+              <li>
+                Non puoi inserire lo stesso risultato per entrambi i piloti
+              </li>
+            </ul>
+          </li>
+          <li>Campi scommessa primo pilota</li>
+          <li>Campi scommessa secondo pilota</li>
+          <li>Testo di aiuto per scommesse duplicate</li>
+          <li>
+            Pulsante salva:
+            <img src="assets/save.png" />
+            <p>Scommessa valida e salvabile</p>
+            <img src="assets/invalidBet.png" />
+            <p>Scommessa non valida</p>
+            <img src="assets/outOfTime.png" />
+            <p>Tempo scaduto, non modificabile</p>
+          </li>
         </ol>
-        <p>Puoi modificare la scommessa finché il countdown non scade. Alla scadenza diventerà definitiva.</p>
+        <p>
+          Puoi modificare la scommessa finché il countdown non scade. Alla
+          scadenza diventerà definitiva.
+        </p>
         <p>La schermata diventerà in sola lettura.</p>
-        <img src="assets/closedBet.png" height="50%" width="50%"/>
+        <img src="assets/closedBet.png" height="50%" width="50%" />
+      </div>
     </div>
-</div>
 
-<div class="accordion" id="Settings">
-    <button class="accordion-header">Impostazioni</button>
-    <div class="accordion-content">
+    <div class="accordion" id="Settings">
+      <button class="accordion-header">Impostazioni</button>
+      <div class="accordion-content">
         <p>Qui puoi modificare configurazioni personali come:</p>
         <ul>
-            <li>Password (senza spazi)</li>
-            <li>Nickname</li>
-            <li>Colore accento</li>
-            <li>Notifiche 1h prima della scadenza</li>
-            <li>Modalità scura</li>
+          <li>Password (senza spazi)</li>
+          <li>Nickname</li>
+          <li>Colore accento</li>
+          <li>Notifiche 1h prima della scadenza</li>
+          <li>Modalità scura</li>
         </ul>
+      </div>
     </div>
-</div>
 
-<div class="accordion" id="Market">
-    <button class="accordion-header">Mercato Estivo</button>
-    <div class="accordion-content">
+    <div class="accordion" id="Market">
+      <button class="accordion-header">Mercato Estivo</button>
+      <div class="accordion-content">
         <p>Il Mercato Estivo si svolge durante la pausa estiva F1.</p>
         <p>È possibile vendere <b>un</b> pilota per acquistarne un altro.</p>
         <p>I prezzi vengono aggiornati in base ai risultati stagionali.</p>
         <p>La pagina iniziale apparirà così:</p>
-        <img src="assets/market1.png" height="50%" width="50%"/>
+        <img src="assets/market1.png" height="50%" width="50%" />
         <ol>
-            <li>Countdown chiusura mercato</li>
-            <li>Binotti disponibili</li>
-            <li>Lista piloti ordinata per prezzo aggiornato</li>
+          <li>Countdown chiusura mercato</li>
+          <li>Binotti disponibili</li>
+          <li>Lista piloti ordinata per prezzo aggiornato</li>
         </ol>
-        <p>Seleziona un pilota posseduto per iniziare l'operazione e acquistane uno tra quelli disponibili.</p>
+        <p>
+          Seleziona un pilota posseduto per iniziare l'operazione e acquistane
+          uno tra quelli disponibili.
+        </p>
         <p>I binotti risparmiati inizialmente vengono conteggiati.</p>
         <p>Puoi annullare l'operazione durante la pausa estiva.</p>
         <p>Se non salvi nulla entro la fine, la squadra rimarrà invariata.</p>
-        <img src="assets/market2.png" height="50%" width="50%"/>
+        <img src="assets/market2.png" height="50%" width="50%" />
         <ol>
-            <li>Pilota da cedere</li>
-            <li>Pilota sostitutivo</li>
-            <li>Pulsante annulla</li>
-            <li>Pulsante salva</li>
+          <li>Pilota da cedere</li>
+          <li>Pilota sostitutivo</li>
+          <li>Pulsante annulla</li>
+          <li>Pulsante salva</li>
         </ol>
+      </div>
     </div>
-</div>
 
-<div class="accordion" id="Info">
-    <button class="accordion-header">FAQ</button>
-    <div class="accordion-content">
+    <div class="accordion" id="Info">
+      <button class="accordion-header">FAQ</button>
+      <div class="accordion-content">
         <p><b>Cosa succede se un pilota viene sostituito?</b></p>
-        <p>Il sostituto verrà assegnato automaticamente alla squadra e porterà punti.</p>
+        <p>
+          Il suo sostituto verrà assegnato automaticamente alla tua squadra.
+        </p>
         <p><b>E se il mio pilota salta una o più gare?</b></p>
-        <p>I punti del sostituto verranno conteggiati normalmente.</p>
+        <p>I punti del suo sostituto verranno conteggiati normalmente.</p>
         <p><b>Come vengono gestite eventuali penalità?</b></p>
-        <p>I punti vengono calcolati solo a decisioni definitive.
-            Per le qualifiche conta la griglia effettiva, per la gara si attende la decisione FIA.</p>
+        <p>
+          I punti vengono calcolati solo a decisioni definitive. Per le
+          qualifiche conta la griglia effettiva, per la gara si attende la
+          decisione FIA.
+        </p>
         <p><b>Piloti partiti dalla pit lane?</b></p>
-        <p>Partire dalla pit lane equivale alla 20ª posizione. Se più piloti partono dai box verrà considerato l'ordine ufficiale.</p>
+        <p>
+          Partire dalla pit lane equivale alla 20ª posizione. Se più piloti
+          partono dai box verrà considerato l'ordine ufficiale.
+        </p>
         <p><b>Ho dimenticato la prima scommessa?</b></p>
-        <p>Riceverai <b>-5 punti</b>. Se esiste una gara precedente verrà ereditata la scommessa; se è la prima gara stagionale riceverai solo la penalità.</p>
+        <p>
+          Riceverai <b>-5 punti</b>. Se esiste una gara precedente verrà
+          ereditata la scommessa; se è la prima gara stagionale riceverai solo
+          la penalità.
+        </p>
+      </div>
     </div>
-</div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
         const headers = document.querySelectorAll(".accordion-header");
 
         headers.forEach((header) => {
-            header.addEventListener("click", () => {
-                const content = header.nextElementSibling;
-                content.classList.toggle("active");
-            });
+          header.addEventListener("click", () => {
+            const content = header.nextElementSibling;
+            content.classList.toggle("active");
+          });
         });
 
         if (window.location.hash) {
-            const targetAccordion = document.querySelector(window.location.hash);
-            if (targetAccordion) {
-                const content = targetAccordion.querySelector(".accordion-content");
-                content.classList.add("active");
-            }
+          const targetAccordion = document.querySelector(window.location.hash);
+          if (targetAccordion) {
+            const content = targetAccordion.querySelector(".accordion-content");
+            content.classList.add("active");
+          }
         }
 
         window.addEventListener("hashchange", () => {
-            if (window.location.hash) {
-                const targetAccordion = document.querySelector(window.location.hash);
-                if (targetAccordion) {
-                    const content = targetAccordion.querySelector(".accordion-content");
-                    content.classList.add("active");
-                }
+          if (window.location.hash) {
+            const targetAccordion = document.querySelector(
+              window.location.hash,
+            );
+            if (targetAccordion) {
+              const content =
+                targetAccordion.querySelector(".accordion-content");
+              content.classList.add("active");
             }
+          }
         });
-    });
-</script>
-
-</body>
+      });
+    </script>
+  </body>
 </html>
